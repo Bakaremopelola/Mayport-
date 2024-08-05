@@ -437,7 +437,7 @@ section.container {
     gap: 20px;
     align-items: center;
     margin: 0;
-    background: linear-gradient(45deg, rgba(0, 0, 255, 0.1) 30%, rgba(60, 179, 113, 0.477) 100%)
+    /* background: linear-gradient(45deg, rgba(0, 0, 255, 0.1) 30%, rgba(60, 179, 113, 0.477) 100%) */
 }
 
 .contact-details, .social-media {
@@ -447,6 +447,7 @@ section.container {
 }
 #contact{
     margin: 0;
+    background: linear-gradient(45deg, rgba(0, 0, 255, 0.1) 30%, rgba(60, 179, 113, 0.477) 100%)
 }
 
 
