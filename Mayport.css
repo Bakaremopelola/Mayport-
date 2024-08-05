@@ -160,21 +160,77 @@ header {
     background-color: rgba(255, 255, 255, 1);
 }
 
-.mission {
+/* .mission {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     height: 60vw;
-}
+} */
 
-.section-mission {
+/* .section-mission {
     display: flex;
     justify-content: center;
     gap: 4em;
     align-items: center;
     width: 60vw;
+} */
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
 }
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.card-content h2 {
+    margin-top: 0;
+    font-size: 1.5em;
+}
+
+.card-content p {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .card-content h2 {
+        font-size: 1.2em;
+    }
+
+    .card-content p {
+        font-size: 0.9em;
+    }
+}
+
 
 section.container {
     padding: 20px;
@@ -192,7 +248,7 @@ section.container {
     text-align: justify;
 }
 
-#values, #value, #value-proposition {
+/* #values, #value, #value-proposition {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -216,18 +272,18 @@ section.container {
 .values1 {
     width: 40vw;
     list-style-type: circle;
-}
+} */
 
-#services {
+/* #services {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     padding: 2em 0;
     height: 60vh;
-}
+} */
 
-.values2 {
+/* .values2 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -243,34 +299,76 @@ section.container {
     flex-direction: column;
     flex-wrap: wrap;
     list-style-type: circle;
+} */
+
+.section-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
 }
 
-.img {
-    height: 60vh;
-    width: 30vw;
+.section {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
 }
 
-.section img {
-    max-width: 100%;
+.section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card img {
+    width: 100%;
     height: auto;
+    object-fit: cover;
+    margin-bottom: 20px;
 }
 
-.section ul {
+.values1, .values2 {
     list-style-type: none;
     padding: 0;
+    margin: 0;
+    width: 100%;
 }
 
-.section ul li {
+.values1 li, .values2 li {
     background: #f1f1f1;
     margin: 5px 0;
     padding: 10px;
     border-radius: 5px;
+    text-align: center;
 }
 
-.trusted-section {
-    text-align: center;
-    margin: 20px 0;
+/* Responsive Design */
+@media (max-width: 768px) {
+    .section-container {
+        grid-template-columns: 1fr;
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
 }
+
 
 #contact {
     text-align: center;
@@ -351,13 +449,88 @@ footer p {
     .values2 {
         width: 80vw;
     }
+    .PG{
+        font-size: 1.3em;
+    }
+    .social-icons{
+        display: flex;
+    }
     .img {
         height: auto;
         width: 80vw;
     }
+    .mission{
+        height: auto;
+    }
+    .section-mission{
+        flex-direction: column;
+        height: auto;
+    }
+    .valuess{
+        flex-direction: column;
+        display: flex;
+        height: auto;
+    }
+    .navigator img{
+        display: none;
+    }
+    .linkss{
+        flex-wrap: wrap;
+        flex-direction: row;
+        width: 100vw;
+        gap: 0.5em;
+        height: 20vh;
+        
+    }
+    #value{
+        height: auto;
+    }
+    .linkss a{
+        font-size: 0.7em;
+        color: black;
+    }
+    #value-proposition, #services{
+        height: auto;
+    }
+    .values1{
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    .values2{
+        width: 80vw;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        height: auto;
+    }
     #contact {
         height: auto;
         padding: 1em;
+        flex-direction: column;
+    }
+    .div{
+        flex-direction: column;
+        width: 80vw;
+        height: 60vh;
+
+    }
+    .div2 {
+        width: 80vw;
+        height: 60vh;
+    }
+    .paw{
+        width: 80vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5em;
+    }
+    .div3, .div4 {
+        width: 80vw;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 }
 
